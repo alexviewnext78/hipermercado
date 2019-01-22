@@ -10,6 +10,10 @@ public interface ICategoriaBase {
 	
 	public String getTextCategoriaToPrint();
 
+<<<<<<< HEAD
+	public Boolean esTemporal=true;
+=======
 	public Boolean esTemporal;
+>>>>>>> refs/remotes/origin/develop
 
 }
