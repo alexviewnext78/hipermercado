@@ -8,7 +8,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	
 	private String nombre;
 	private List<IProductoBase> productos;
-
+	private Boolean esTemporal;
 	
 	
 	public CategoriaBaseImpl(String nombre) {
@@ -49,6 +49,14 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public Boolean getEsTemporal() {
+		return esTemporal;
+	}
+
+	public void setEsTemporal(Boolean esTemporal) {
+		this.esTemporal = esTemporal;
 	}
 
 	
