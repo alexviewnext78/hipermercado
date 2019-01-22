@@ -76,11 +76,23 @@ public class HiperMercadoMain {
 	
 	public static void main(String[] args) {
 		HiperMercadoMain hipermercado = new HiperMercadoMain();
-		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
-		ProductoBaseImpl productoBaseImpl = new ProductoBaseImpl("000011");
-		productoBaseImpl.setNombre("Base");
-		productoBaseImpl.setPrecio(0);
-		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
+		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl(" 4.-Frutas");
+		ProductoBaseImpl naranja = new ProductoBaseImpl("1");
+		ProductoBaseImpl uva = new ProductoBaseImpl("2");
+		ProductoBaseImpl platano = new ProductoBaseImpl("3");
+		ProductoBaseImpl piña = new ProductoBaseImpl("4");
+		
+		naranja.setNombre("naranja");
+		uva.setNombre("uva");
+		platano.setNombre("platano");
+		piña.setNombre("piña");
+		
+		naranja.setPrecio(0);
+		uva.setPrecio(0);
+		platano.setPrecio(0);
+		piña.setPrecio(0);
+		
+		categoriaBase.setProductos(Arrays.asList((IProductoBase)naranja,(IProductoBase)uva,(IProductoBase)platano,(IProductoBase)piña));
 		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
 		pintarDatosHiperMercado(hipermercado);
 
