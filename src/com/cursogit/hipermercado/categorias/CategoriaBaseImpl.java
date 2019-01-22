@@ -8,7 +8,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	
 	private String nombre;
 	private List<IProductoBase> productos;
-
+	private Boolean esTemporal;
 	
 	
 	public CategoriaBaseImpl(String nombre) {
@@ -25,7 +25,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	public String toString() {
 		StringBuffer strBuffer = new StringBuffer();
 		strBuffer.append("        \n");		
-		strBuffer.append("        == = =  CATEGORIA *** ").append(nombre).append("= = = = = = = = = = = = = = \n");
+		strBuffer.append("        == = =  CATEGORIA  ").append(nombre).append("= = = = = = = = = = = = = = = =  \n");
 		strBuffer.append("        -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - \n");
 		if (productos==null || productos.size()==0) {
 			strBuffer.append("              == = =  SIN PRODUCTOS  = = =  \n");
@@ -49,6 +49,14 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public Boolean getEsTemporal() {
+		return esTemporal;
+	}
+
+	public void setEsTemporal(Boolean esTemporal) {
+		this.esTemporal = esTemporal;
 	}
 
 	
