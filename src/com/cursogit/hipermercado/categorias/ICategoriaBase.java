@@ -10,6 +10,6 @@ public interface ICategoriaBase {
 	
 	public String getTextCategoriaToPrint();
 
-	public Boolean esTemporal();
+	public Boolean esTemporal;
 
 }
