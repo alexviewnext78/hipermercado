@@ -92,7 +92,7 @@ public class HiperMercadoMain {
 	private static void pintarDatosHiperMercado(HiperMercadoMain hipermercado) {
 		StringBuffer strBuffer = new StringBuffer();
 		strBuffer.append(" ========================================================================= \n");
-		strBuffer.append(" ===== HIPERMERCADO ====================================================== \n");
+		strBuffer.append(" =========================== HIPERMERCADO ================================ \n");
 		strBuffer.append(" ------------------------------------------------------------------------- \n");
 		if (hipermercado.getCategorias()==null || hipermercado.getCategorias().size()==0) {
 			strBuffer.append("   =====  SIN CATEGORIAS  ==  \n");

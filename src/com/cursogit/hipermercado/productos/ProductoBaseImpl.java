@@ -59,8 +59,8 @@ public class ProductoBaseImpl implements IProductoBase {
 	public String toString() {
 		StringBuffer strBuffer = new StringBuffer();		
 		strBuffer.append("              == = = ===== ").append(codigo).append(" \n");
-		strBuffer.append("                             NOMBRE    ").append(nombre).append(" \n");
-		strBuffer.append("                             PRECIO    ").append(precio.toString()).append(" \n");				
+		strBuffer.append("                             NOMBRE DEL PRODUCTO:   ").append(nombre).append(" \n");
+		strBuffer.append("                             PRECIO DEL PRODUCTO:   ").append(precio.toString()).append(" \n");				
 		return strBuffer.toString();
 	}
 

@@ -25,7 +25,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	public String toString() {
 		StringBuffer strBuffer = new StringBuffer();
 		strBuffer.append("        \n");		
-		strBuffer.append("        == = =  CATEGORIA  ").append(nombre).append("= = = = = = = = = = = = = = \n");
+		strBuffer.append("        == = =  CATEGORÍA  ").append(nombre).append("= = = = = = = = = = = = = = \n");
 		strBuffer.append("        -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - \n");
 		if (productos==null || productos.size()==0) {
 			strBuffer.append("              == = =  SIN PRODUCTOS  = = =  \n");
