@@ -9,6 +9,7 @@ public class ProductoBaseImpl implements IProductoBase {
 	private String codigo;
 	private String nombre;
 	private long precio;
+	private Integer peso;
 	
 	
 	
@@ -23,6 +24,22 @@ public class ProductoBaseImpl implements IProductoBase {
 	
 
 	
+	public Integer getPeso() {
+		return peso;
+	}
+
+
+
+
+
+	public void setPeso(Integer peso) {
+		this.peso = peso;
+	}
+
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
