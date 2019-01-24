@@ -58,6 +58,12 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	public String getTextCategoriaToPrint() {
 		return this.toString();
 	}
+
+	@Override
+	public String getSeccion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
