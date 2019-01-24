@@ -100,6 +100,24 @@ public class HiperMercadoMain {
 		listabebidas.add(productoBaseImplBebidas3);
 		categoriaBaseBebidas.setProductos(listabebidas);
 		listaCategorias.add(categoriaBaseBebidas);
+		
+		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescaderia");
+		ProductoBaseImpl productoBaseImplPescaderia = new ProductoBaseImpl("000015");
+		List<IProductoBase> listapescaderia = new ArrayList<>();
+		productoBaseImplPescaderia.setNombre("Pulpo");
+		productoBaseImplPescaderia.setPrecio(2f);
+		listabebidas.add(productoBaseImplPescaderia);
+		ProductoBaseImpl productoBaseImplPescaderia2 = new ProductoBaseImpl("000016");
+		productoBaseImplPescaderia2.setNombre("Merluza");
+		productoBaseImplPescaderia2.setPrecio(3f);
+		listabebidas.add(productoBaseImplPescaderia2);
+		ProductoBaseImpl productoBaseImplPescaderia3 = new ProductoBaseImpl("000017");
+		productoBaseImplPescaderia3.setNombre("Salmon");
+		productoBaseImplPescaderia3.setPrecio(4f);
+		listabebidas.add(productoBaseImplPescaderia3);
+		categoriaBasePescaderia.setProductos(listapescaderia);
+		listaCategorias.add(categoriaBasePescaderia);
+		
 		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
 
