@@ -75,6 +75,26 @@ public class HiperMercadoMain {
 		this.categorias = categorias;
 	}
 	
+	public static CategoriaBaseImpl categoriasQuesos() {
+		CategoriaBaseImpl categoriaBaseQuesos = new CategoriaBaseImpl("Quesos");
+		ProductoBaseImpl productoBaseImplQuesos = new ProductoBaseImpl("000030");
+		List<IProductoBase> listaQuesos = new ArrayList<>();
+		productoBaseImplQuesos.setNombre("Semicurado");
+		productoBaseImplQuesos.setPrecio(4f);
+		listaQuesos.add(productoBaseImplQuesos);
+		ProductoBaseImpl productoBaseImplQuesos2 = new ProductoBaseImpl("000031");
+		productoBaseImplQuesos2.setNombre("Fresco");
+		productoBaseImplQuesos2.setPrecio(3f);
+		listaQuesos.add(productoBaseImplQuesos2);
+		ProductoBaseImpl productoBaseImplQuesos3 = new ProductoBaseImpl("000032");
+		productoBaseImplQuesos3.setNombre("Emmental");
+		productoBaseImplQuesos3.setPrecio(4f);
+		listaQuesos.add(productoBaseImplQuesos3);
+		categoriaBaseQuesos.setProductos(listaQuesos);
+		return categoriaBaseQuesos;
+		
+	}
+	
 	public static void main(String[] args) {
 		HiperMercadoMain hipermercado = new HiperMercadoMain();
 		List<ICategoriaBase> listaCategorias = new ArrayList<>();
@@ -100,6 +120,7 @@ public class HiperMercadoMain {
 		listabebidas.add(productoBaseImplBebidas3);
 		categoriaBaseBebidas.setProductos(listabebidas);
 		listaCategorias.add(categoriaBaseBebidas);
+		listaCategorias.add(categoriasQuesos());
 		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
 
