@@ -153,7 +153,7 @@ public class HiperMercadoMain {
 		listaCategorias.add(categoriasQuesos());
 		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
-		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescaderia");
+		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescadería");
 		ProductoBaseImpl productoBaseImplPescaderia = new ProductoBaseImpl("000015");
 		List<IProductoBase> listapescaderia = new ArrayList<>();
 		productoBaseImplPescaderia.setNombre("Pulpo");
