@@ -47,8 +47,6 @@ import com.cursogit.hipermercado.productos.ProductoBaseImpl;
 		 +getTextProductoToPrint(): String
 		}
 		
-				//TEXTO PARA EDITAR
-				
 		ICategoriaBase <|-- CategoriaX 
 		IProductoBase<|-- ProductoX 
 		
@@ -81,7 +79,7 @@ public class HiperMercadoMain {
 		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
 		ProductoBaseImpl productoBaseImpl = new ProductoBaseImpl("000011");
 		productoBaseImpl.setNombre("Base");
-		productoBaseImpl.setPrecio("0 €");
+		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
 		pintarDatosHiperMercado(hipermercado);
@@ -99,7 +97,7 @@ public class HiperMercadoMain {
 		if (hipermercado.getCategorias()==null || hipermercado.getCategorias().size()==0) {
 			strBuffer.append("   =====  SIN CATEGORIAS  ==  \n");
 		} else {
-			strBuffer.append("   ===== CATEGORIAS:  \n");
+			strBuffer.append("   ===== CATERORIAS:  \n");
 			for (ICategoriaBase iCategoriaBase : hipermercado.getCategorias()) {
 				strBuffer.append(iCategoriaBase.getTextCategoriaToPrint());
 			}
