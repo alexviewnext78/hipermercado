@@ -1,5 +1,6 @@
 package com.cursogit.hipermercado.main;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -84,13 +85,7 @@ public class HiperMercadoMain {
 		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		listaCategorias.add(categoriaBase);
-		
-		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
-		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
-		List<IProductoBase> listabebidas = new ArrayList<>();
-		productoBaseImplBebidas.setNombre("Cerveza");
-		productoBaseImplBebidas.setPrecio(2f);
-		listabebidas.add(productoBaseImplBebidas);
+
 		
 		ProductoBaseImpl productoBaseImplC = new ProductoBaseImpl("000012");
 		productoBaseImplC.setNombre("Cerveza");
@@ -118,10 +113,41 @@ public class HiperMercadoMain {
 		productoBaseImplBebidas3.setPrecio(4f);
 		listabebidas.add(productoBaseImplBebidas3);
 		
+
+		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
+		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
+		List<IProductoBase> listabebidas = new ArrayList<>();
+		productoBaseImplBebidas.setNombre("Cerveza");
+		productoBaseImplBebidas.setPrecio(2f);
+		listabebidas.add(productoBaseImplBebidas);
+		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
+		productoBaseImplBebidas2.setNombre("Fanta");
+		productoBaseImplBebidas2.setPrecio(3f);
+		listabebidas.add(productoBaseImplBebidas2);
+		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
+		productoBaseImplBebidas3.setNombre("Cocacola");
+		productoBaseImplBebidas3.setPrecio(4f);
+		listabebidas.add(productoBaseImplBebidas3);
 		categoriaBaseBebidas.setProductos(listabebidas);
 		listaCategorias.add(categoriaBaseBebidas);
-		hipermercado.setCategorias(listaCategorias);
-		pintarDatosHiperMercado(hipermercado);
+		
+		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescaderia");
+		ProductoBaseImpl productoBaseImplPescaderia = new ProductoBaseImpl("000015");
+		List<IProductoBase> listapescaderia = new ArrayList<>();
+		productoBaseImplPescaderia.setNombre("Pulpo");
+		productoBaseImplPescaderia.setPrecio(2f);
+		listabebidas.add(productoBaseImplPescaderia);
+		ProductoBaseImpl productoBaseImplPescaderia2 = new ProductoBaseImpl("000016");
+		productoBaseImplPescaderia2.setNombre("Merluza");
+		productoBaseImplPescaderia2.setPrecio(3f);
+		listabebidas.add(productoBaseImplPescaderia2);
+		ProductoBaseImpl productoBaseImplPescaderia3 = new ProductoBaseImpl("000017");
+		productoBaseImplPescaderia3.setNombre("Salmon");
+		productoBaseImplPescaderia3.setPrecio(4f);
+		listabebidas.add(productoBaseImplPescaderia3);
+		categoriaBasePescaderia.setProductos(listapescaderia);
+		listaCategorias.add(categoriaBasePescaderia);
+
 
 	}
 
