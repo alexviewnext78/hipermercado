@@ -99,7 +99,7 @@ public class HiperMercadoMain {
 		if (hipermercado.getCategorias()==null || hipermercado.getCategorias().size()==0) {
 			strBuffer.append("   =====  SIN CATEGORIAS  ==  \n");
 		} else {
-			strBuffer.append("   ===== CATERORIAS:  \n");
+			strBuffer.append("   ===== CATEGORIAS:  \n");
 			for (ICategoriaBase iCategoriaBase : hipermercado.getCategorias()) {
 				strBuffer.append(iCategoriaBase.getTextCategoriaToPrint());
 			}
