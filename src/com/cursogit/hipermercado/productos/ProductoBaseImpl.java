@@ -8,7 +8,7 @@ public class ProductoBaseImpl implements IProductoBase {
 	
 	private String codigo;
 	private String nombre;
-	private String precio;
+	private Float precio;
 	
 	
 	
@@ -45,13 +45,13 @@ public class ProductoBaseImpl implements IProductoBase {
 
 
 
-	public String getPrecio() {
+	public Float getPrecio() {
 		return precio;
 	}
 
 
 
-	public void setPrecio(String precio) {
+	public void setPrecio(Float precio) {
 		this.precio = precio;
 	}
 	
@@ -60,7 +60,7 @@ public class ProductoBaseImpl implements IProductoBase {
 		StringBuffer strBuffer = new StringBuffer();		
 		strBuffer.append("              == = = ===== ").append(codigo).append(" \n");
 		strBuffer.append("                             NOMBRE    ").append(nombre).append(" \n");
-		strBuffer.append("                             PRECIO    ").append(precio).append(" \n");				
+		strBuffer.append("                             PRECIO    ").append(precio.toString()).append(" \n");				
 		return strBuffer.toString();
 	}
 
