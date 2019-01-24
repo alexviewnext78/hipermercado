@@ -8,6 +8,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	
 	private String nombre;
 	private List<IProductoBase> productos;
+
 	private String seccion;
 
 	
@@ -63,9 +64,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	public String getSeccion() {
 		// TODO Auto-generated method stub
 		return null;
-	}
 	
-	
-	
+	}	
 
 }
