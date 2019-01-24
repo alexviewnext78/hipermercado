@@ -105,68 +105,68 @@ public class HiperMercadoMain {
 		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		listaCategorias.add(categoriaBase);
-		
-		List<ICategoriaBase> listabebidas = null;
+
 		
 		ProductoBaseImpl productoBaseImplC = new ProductoBaseImpl("000012");
 		productoBaseImplC.setNombre("Cerveza");
 		productoBaseImplC.setPrecio(new Float(1));
-		
-		listabebidas.add((ICategoriaBase) productoBaseImplC);
+		listabebidas.add(productoBaseImplC);
 		
 		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
 		productoBaseImplBebidas2.setNombre("Fanta");
 		productoBaseImplBebidas2.setPrecio(3f);
-		listabebidas.add((ICategoriaBase) productoBaseImplBebidas2);
+		listabebidas.add(productoBaseImplBebidas2);
 		
-		listabebidas.add((ICategoriaBase) productoBaseImplBebidas2);
+		listabebidas.add(productoBaseImplBebidas2);
 		ProductoBaseImpl productoBaseImplF = new ProductoBaseImpl("000014");
 		productoBaseImplF.setNombre("Fanta");
 		productoBaseImplF.setPrecio(new Float(2));
-		listabebidas.add((ICategoriaBase) productoBaseImplF);
+		listabebidas.add(productoBaseImplF);
 		
 		ProductoBaseImpl productoBaseImplCo = new ProductoBaseImpl("000013");
 		productoBaseImplCo.setNombre("Cocacola");
-		productoBaseImplCo.setPrecio(new Float(+1.5));
-		listabebidas.add((ICategoriaBase) productoBaseImplCo);
+		productoBaseImplCo.setPrecio(new Float(1,5));
+		listabebidas.add(productoBaseImplCo);
 		
 		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
 		productoBaseImplBebidas3.setNombre("Cocacola");
 		productoBaseImplBebidas3.setPrecio(4f);
-		listabebidas.add((ICategoriaBase) productoBaseImplBebidas3);
+		listabebidas.add(productoBaseImplBebidas3);
 		
 
 		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
 		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
-		List<IProductoBase> listabebidas1 = new ArrayList<>();
+		List<IProductoBase> listabebidas = new ArrayList<>();
 		productoBaseImplBebidas.setNombre("Cerveza");
 		productoBaseImplBebidas.setPrecio(2f);
-		listabebidas1.add(productoBaseImplBebidas);
-		ProductoBaseImpl productoBaseImplBebidas21 = new ProductoBaseImpl("000013");
-		productoBaseImplBebidas21.setNombre("Fanta");
-		productoBaseImplBebidas21.setPrecio(3f);
-		listabebidas1.add(productoBaseImplBebidas21);
-		ProductoBaseImpl productoBaseImplBebidas31 = new ProductoBaseImpl("000014");
-		productoBaseImplBebidas31.setNombre("Cocacola");
-		productoBaseImplBebidas31.setPrecio(4f);
-		listabebidas1.add(productoBaseImplBebidas31);
-		categoriaBaseBebidas.setProductos(listabebidas1);
+		listabebidas.add(productoBaseImplBebidas);
+		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
+		productoBaseImplBebidas2.setNombre("Fanta");
+		productoBaseImplBebidas2.setPrecio(3f);
+		listabebidas.add(productoBaseImplBebidas2);
+		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
+		productoBaseImplBebidas3.setNombre("Cocacola");
+		productoBaseImplBebidas3.setPrecio(4f);
+		listabebidas.add(productoBaseImplBebidas3);
+		categoriaBaseBebidas.setProductos(listabebidas);
 		listaCategorias.add(categoriaBaseBebidas);
-		
-		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescaderia");
+		listaCategorias.add(categoriasQuesos());
+		hipermercado.setCategorias(listaCategorias);
+		pintarDatosHiperMercado(hipermercado);
+		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescadería");
 		ProductoBaseImpl productoBaseImplPescaderia = new ProductoBaseImpl("000015");
 		List<IProductoBase> listapescaderia = new ArrayList<>();
 		productoBaseImplPescaderia.setNombre("Pulpo");
 		productoBaseImplPescaderia.setPrecio(2f);
-		listabebidas1.add(productoBaseImplPescaderia);
+		listabebidas.add(productoBaseImplPescaderia);
 		ProductoBaseImpl productoBaseImplPescaderia2 = new ProductoBaseImpl("000016");
 		productoBaseImplPescaderia2.setNombre("Merluza");
 		productoBaseImplPescaderia2.setPrecio(3f);
-		listabebidas1.add(productoBaseImplPescaderia2);
+		listabebidas.add(productoBaseImplPescaderia2);
 		ProductoBaseImpl productoBaseImplPescaderia3 = new ProductoBaseImpl("000017");
 		productoBaseImplPescaderia3.setNombre("Salmon");
 		productoBaseImplPescaderia3.setPrecio(4f);
-		listabebidas1.add(productoBaseImplPescaderia3);
+		listabebidas.add(productoBaseImplPescaderia3);
 		categoriaBasePescaderia.setProductos(listapescaderia);
 		listaCategorias.add(categoriaBasePescaderia);
 

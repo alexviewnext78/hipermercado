@@ -9,6 +9,25 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	private String nombre;
 	private List<IProductoBase> productos;
 
+	
+	
+	public CategoriaBaseImpl(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
+	@Override
+	public List<IProductoBase> getProductos() {
+		return this.productos;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuffer strBuffer = new StringBuffer();
+		strBuffer.append("        \n");		
+		strBuffer.append("        == = =  CATEGORÍA  ").append(nombre).append("= = = = = = = = = = = = = = \n");
+
+
 	private String seccion;
 
 	
