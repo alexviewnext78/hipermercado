@@ -1,5 +1,6 @@
 package com.cursogit.hipermercado.main;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -47,8 +48,6 @@ import com.cursogit.hipermercado.productos.ProductoBaseImpl;
 		 +getTextProductoToPrint(): String
 		}
 		
-				//TEXTO PARA EDITAR
-				
 		ICategoriaBase <|-- CategoriaX 
 		IProductoBase<|-- ProductoX 
 		
@@ -78,12 +77,30 @@ public class HiperMercadoMain {
 	
 	public static void main(String[] args) {
 		HiperMercadoMain hipermercado = new HiperMercadoMain();
+		List<ICategoriaBase> listaCategorias = new ArrayList<>();
 		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
 		ProductoBaseImpl productoBaseImpl = new ProductoBaseImpl("000011");
 		productoBaseImpl.setNombre("Base");
-		productoBaseImpl.setPrecio(0);
+		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
-		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
+		listaCategorias.add(categoriaBase);
+		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
+		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
+		List<IProductoBase> listabebidas = new ArrayList<>();
+		productoBaseImplBebidas.setNombre("Cerveza");
+		productoBaseImplBebidas.setPrecio(2f);
+		listabebidas.add(productoBaseImplBebidas);
+		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
+		productoBaseImplBebidas2.setNombre("Fanta");
+		productoBaseImplBebidas2.setPrecio(3f);
+		listabebidas.add(productoBaseImplBebidas2);
+		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
+		productoBaseImplBebidas3.setNombre("Cocacola");
+		productoBaseImplBebidas3.setPrecio(4f);
+		listabebidas.add(productoBaseImplBebidas3);
+		categoriaBaseBebidas.setProductos(listabebidas);
+		listaCategorias.add(categoriaBaseBebidas);
+		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
 
 	}
@@ -99,7 +116,7 @@ public class HiperMercadoMain {
 		if (hipermercado.getCategorias()==null || hipermercado.getCategorias().size()==0) {
 			strBuffer.append("   =====  SIN CATEGORIAS  ==  \n");
 		} else {
-			strBuffer.append("   ===== CATEGORIAS:  \n");
+			strBuffer.append("   ===== CATERORIAS:  \n");
 			for (ICategoriaBase iCategoriaBase : hipermercado.getCategorias()) {
 				strBuffer.append(iCategoriaBase.getTextCategoriaToPrint());
 			}

@@ -8,7 +8,7 @@ public class ProductoBaseImpl implements IProductoBase {
 	
 	private String codigo;
 	private String nombre;
-	private long precio;
+	private Float precio;
 	private Integer peso;
 	
 	
@@ -62,13 +62,13 @@ public class ProductoBaseImpl implements IProductoBase {
 
 
 
-	public long getPrecio() {
+	public Float getPrecio() {
 		return precio;
 	}
 
 
 
-	public void setPrecio(long precio) {
+	public void setPrecio(Float precio) {
 		this.precio = precio;
 	}
 	
