@@ -82,6 +82,26 @@ public class HiperMercadoMain {
 		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
+		
+		CategoriaBaseImpl categoriaBase2 = new CategoriaBaseImpl("Bebidas");
+		
+		ProductoBaseImpl productoBaseImplC = new ProductoBaseImpl("000012");
+		productoBaseImplC.setNombre("Cerveza");
+		productoBaseImplC.setPrecio(new Float(1));
+		categoriaBase2.setProductos(Arrays.asList((IProductoBase)productoBaseImplC));
+		
+		ProductoBaseImpl productoBaseImplCo = new ProductoBaseImpl("000013");
+		productoBaseImplCo.setNombre("Cocacola");
+		productoBaseImplCo.setPrecio(new Float(1,5));
+		categoriaBase2.getProductos.add((IProductoBase)productoBaseImplCo);
+		
+		ProductoBaseImpl productoBaseImplF = new ProductoBaseImpl("000014");
+		productoBaseImplF.setNombre("Fanta");
+		productoBaseImplF.setPrecio(new Float(2));
+		categoriaBase2.getProductos.add((IProductoBase)productoBaseImplF);
+		
+		hipermercado.getCategorias().add((ICategoriaBase)categoriaBase2);
+		
 		pintarDatosHiperMercado(hipermercado);
 
 	}
