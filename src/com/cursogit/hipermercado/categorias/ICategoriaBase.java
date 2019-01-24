@@ -9,5 +9,7 @@ public interface ICategoriaBase {
 	public List<IProductoBase> getProductos();
 	
 	public String getTextCategoriaToPrint();
+	
+	public String getSeccion();
 
 }

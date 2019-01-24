@@ -8,6 +8,7 @@ public class CategoriaBaseImpl implements ICategoriaBase {
 	
 	private String nombre;
 	private List<IProductoBase> productos;
+	private String seccion;
 
 	
 	
