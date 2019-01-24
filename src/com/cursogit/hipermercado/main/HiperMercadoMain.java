@@ -75,33 +75,52 @@ public class HiperMercadoMain {
 	}
 	
 	public static void main(String[] args) {
+
 		HiperMercadoMain hipermercado = new HiperMercadoMain();
+		List<ICategoriaBase> listaCategorias = new ArrayList<>();
 		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
 		ProductoBaseImpl productoBaseImpl = new ProductoBaseImpl("000011");
 		productoBaseImpl.setNombre("Base");
 		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
-		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
+		listaCategorias.add(categoriaBase);
 		
-		CategoriaBaseImpl categoriaBase2 = new CategoriaBaseImpl("Bebidas");
+		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
+		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
+		List<IProductoBase> listabebidas = new ArrayList<>();
+		productoBaseImplBebidas.setNombre("Cerveza");
+		productoBaseImplBebidas.setPrecio(2f);
+		listabebidas.add(productoBaseImplBebidas);
 		
 		ProductoBaseImpl productoBaseImplC = new ProductoBaseImpl("000012");
 		productoBaseImplC.setNombre("Cerveza");
 		productoBaseImplC.setPrecio(new Float(1));
-		categoriaBase2.setProductos(Arrays.asList((IProductoBase)productoBaseImplC));
+		listabebidas.add(productoBaseImplC);
+		
+		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
+		productoBaseImplBebidas2.setNombre("Fanta");
+		productoBaseImplBebidas2.setPrecio(3f);
+		listabebidas.add(productoBaseImplBebidas2);
+		
+		listabebidas.add(productoBaseImplBebidas2);
+		ProductoBaseImpl productoBaseImplF = new ProductoBaseImpl("000014");
+		productoBaseImplF.setNombre("Fanta");
+		productoBaseImplF.setPrecio(new Float(2));
+		listabebidas.add(productoBaseImplF);
 		
 		ProductoBaseImpl productoBaseImplCo = new ProductoBaseImpl("000013");
 		productoBaseImplCo.setNombre("Cocacola");
 		productoBaseImplCo.setPrecio(new Float(1,5));
-		categoriaBase2.getProductos.add((IProductoBase)productoBaseImplCo);
+		listabebidas.add(productoBaseImplCo);
 		
-		ProductoBaseImpl productoBaseImplF = new ProductoBaseImpl("000014");
-		productoBaseImplF.setNombre("Fanta");
-		productoBaseImplF.setPrecio(new Float(2));
-		categoriaBase2.getProductos.add((IProductoBase)productoBaseImplF);
+		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
+		productoBaseImplBebidas3.setNombre("Cocacola");
+		productoBaseImplBebidas3.setPrecio(4f);
+		listabebidas.add(productoBaseImplBebidas3);
 		
-		hipermercado.getCategorias().add((ICategoriaBase)categoriaBase2);
-		
+		categoriaBaseBebidas.setProductos(listabebidas);
+		listaCategorias.add(categoriaBaseBebidas);
+		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
 
 	}
