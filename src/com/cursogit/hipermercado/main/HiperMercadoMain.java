@@ -47,6 +47,8 @@ import com.cursogit.hipermercado.productos.ProductoBaseImpl;
 		 +getTextProductoToPrint(): String
 		}
 		
+				//TEXTO PARA EDITAR
+				
 		ICategoriaBase <|-- CategoriaX 
 		IProductoBase<|-- ProductoX 
 		
