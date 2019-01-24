@@ -9,6 +9,8 @@ public class ProductoBaseImpl implements IProductoBase {
 	private String codigo;
 	private String nombre;
 	private Float precio;
+	private Integer peso;
+	private Long iva;
 	
 	
 	
@@ -23,6 +25,22 @@ public class ProductoBaseImpl implements IProductoBase {
 	
 
 	
+	public Integer getPeso() {
+		return peso;
+	}
+
+
+
+
+
+	public void setPeso(Integer peso) {
+		this.peso = peso;
+	}
+
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -42,6 +60,10 @@ public class ProductoBaseImpl implements IProductoBase {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+	
+	public void setIva(Long iva) {
+		this.iva = iva;
+	}
 
 
 
@@ -60,7 +82,7 @@ public class ProductoBaseImpl implements IProductoBase {
 		StringBuffer strBuffer = new StringBuffer();		
 		strBuffer.append("              == = = ===== ").append(codigo).append(" \n");
 		strBuffer.append("                             NOMBRE    ").append(nombre).append(" \n");
-		strBuffer.append("                             PRECIO    ").append(precio.toString()).append(" \n");				
+		strBuffer.append("                             PRECIO    ").append(precio).append(" € \n");				
 		return strBuffer.toString();
 	}
 
@@ -74,7 +96,10 @@ public class ProductoBaseImpl implements IProductoBase {
 	}
 	
 	
-	
+	@Override
+	public Long getIva() {
+		return iva;
+	}
 	
 
 }

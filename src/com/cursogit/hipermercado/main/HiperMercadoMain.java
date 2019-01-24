@@ -96,6 +96,7 @@ public class HiperMercadoMain {
 	}
 	
 	public static void main(String[] args) {
+
 		HiperMercadoMain hipermercado = new HiperMercadoMain();
 		List<ICategoriaBase> listaCategorias = new ArrayList<>();
 		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
@@ -104,6 +105,35 @@ public class HiperMercadoMain {
 		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		listaCategorias.add(categoriaBase);
+
+		
+		ProductoBaseImpl productoBaseImplC = new ProductoBaseImpl("000012");
+		productoBaseImplC.setNombre("Cerveza");
+		productoBaseImplC.setPrecio(new Float(1));
+		listabebidas.add(productoBaseImplC);
+		
+		ProductoBaseImpl productoBaseImplBebidas2 = new ProductoBaseImpl("000013");
+		productoBaseImplBebidas2.setNombre("Fanta");
+		productoBaseImplBebidas2.setPrecio(3f);
+		listabebidas.add(productoBaseImplBebidas2);
+		
+		listabebidas.add(productoBaseImplBebidas2);
+		ProductoBaseImpl productoBaseImplF = new ProductoBaseImpl("000014");
+		productoBaseImplF.setNombre("Fanta");
+		productoBaseImplF.setPrecio(new Float(2));
+		listabebidas.add(productoBaseImplF);
+		
+		ProductoBaseImpl productoBaseImplCo = new ProductoBaseImpl("000013");
+		productoBaseImplCo.setNombre("Cocacola");
+		productoBaseImplCo.setPrecio(new Float(1,5));
+		listabebidas.add(productoBaseImplCo);
+		
+		ProductoBaseImpl productoBaseImplBebidas3 = new ProductoBaseImpl("000014");
+		productoBaseImplBebidas3.setNombre("Cocacola");
+		productoBaseImplBebidas3.setPrecio(4f);
+		listabebidas.add(productoBaseImplBebidas3);
+		
+
 		CategoriaBaseImpl categoriaBaseBebidas = new CategoriaBaseImpl("Bebidas");
 		ProductoBaseImpl productoBaseImplBebidas = new ProductoBaseImpl("000012");
 		List<IProductoBase> listabebidas = new ArrayList<>();
@@ -120,9 +150,30 @@ public class HiperMercadoMain {
 		listabebidas.add(productoBaseImplBebidas3);
 		categoriaBaseBebidas.setProductos(listabebidas);
 		listaCategorias.add(categoriaBaseBebidas);
+<<<<<<< HEAD
 		listaCategorias.add(categoriasQuesos());
 		hipermercado.setCategorias(listaCategorias);
 		pintarDatosHiperMercado(hipermercado);
+=======
+		
+		CategoriaBaseImpl categoriaBasePescaderia = new CategoriaBaseImpl("Pescaderia");
+		ProductoBaseImpl productoBaseImplPescaderia = new ProductoBaseImpl("000015");
+		List<IProductoBase> listapescaderia = new ArrayList<>();
+		productoBaseImplPescaderia.setNombre("Pulpo");
+		productoBaseImplPescaderia.setPrecio(2f);
+		listabebidas.add(productoBaseImplPescaderia);
+		ProductoBaseImpl productoBaseImplPescaderia2 = new ProductoBaseImpl("000016");
+		productoBaseImplPescaderia2.setNombre("Merluza");
+		productoBaseImplPescaderia2.setPrecio(3f);
+		listabebidas.add(productoBaseImplPescaderia2);
+		ProductoBaseImpl productoBaseImplPescaderia3 = new ProductoBaseImpl("000017");
+		productoBaseImplPescaderia3.setNombre("Salmon");
+		productoBaseImplPescaderia3.setPrecio(4f);
+		listabebidas.add(productoBaseImplPescaderia3);
+		categoriaBasePescaderia.setProductos(listapescaderia);
+		listaCategorias.add(categoriaBasePescaderia);
+
+>>>>>>> branch 'develop' of https://github.com/comunidad-gitvn/hipermercado.git
 
 	}
 

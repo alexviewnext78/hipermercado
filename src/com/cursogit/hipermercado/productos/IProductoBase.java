@@ -7,5 +7,9 @@ public interface IProductoBase {
 	public String getCodigo();
 	
 	public String getTextProductoToPrint();
+	
+	public Long getIva();
+	
+	public Integer getPeso();
 
 }
