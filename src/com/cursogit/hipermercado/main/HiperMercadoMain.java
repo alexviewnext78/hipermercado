@@ -79,7 +79,7 @@ public class HiperMercadoMain {
 		CategoriaBaseImpl categoriaBase = new CategoriaBaseImpl("BASE");
 		ProductoBaseImpl productoBaseImpl = new ProductoBaseImpl("000011");
 		productoBaseImpl.setNombre("Base");
-		productoBaseImpl.setPrecio("0 €");
+		productoBaseImpl.setPrecio(new Float(0));
 		categoriaBase.setProductos(Arrays.asList((IProductoBase)productoBaseImpl));
 		hipermercado.setCategorias(Arrays.asList((ICategoriaBase)categoriaBase));
 		pintarDatosHiperMercado(hipermercado);
