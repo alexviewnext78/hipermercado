@@ -8,6 +8,8 @@ public interface IProductoBase {
 	
 	public String getTextProductoToPrint();
 	
+	public Long getIva();
+	
 	public Integer getPeso();
 
 }

@@ -10,6 +10,7 @@ public class ProductoBaseImpl implements IProductoBase {
 	private String nombre;
 	private Float precio;
 	private Integer peso;
+	private Long iva;
 	
 	
 	
@@ -59,6 +60,10 @@ public class ProductoBaseImpl implements IProductoBase {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+	
+	public void setIva(Long iva) {
+		this.iva = iva;
+	}
 
 
 
@@ -91,7 +96,10 @@ public class ProductoBaseImpl implements IProductoBase {
 	}
 	
 	
-	
+	@Override
+	public Long getIva() {
+		return iva;
+	}
 	
 
 }
