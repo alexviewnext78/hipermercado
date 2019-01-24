@@ -9,7 +9,7 @@ public class ProductoBaseImpl implements IProductoBase {
 	private String codigo;
 	private String nombre;
 	private String precio;
-	
+	private Long iva;
 	
 	
 	
@@ -55,6 +55,10 @@ public class ProductoBaseImpl implements IProductoBase {
 		this.precio = precio;
 	}
 	
+	public void setIva(Long iva) {
+		this.iva = iva;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuffer strBuffer = new StringBuffer();		
@@ -71,6 +75,15 @@ public class ProductoBaseImpl implements IProductoBase {
 	@Override
 	public String getTextProductoToPrint() {
 		return this.toString();
+	}
+
+
+
+
+
+	@Override
+	public Long getIva() {
+		return iva;
 	}
 	
 	
